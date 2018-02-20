@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-    public Paddle paddle;
-
+    private Paddle paddle;
     private Vector3 differenceBetweenBallPaddle;
     private bool GameHasStarted = false;
 	// Use this for initialization
 	void Start () {
+        paddle = FindObjectOfType<Paddle>();
         differenceBetweenBallPaddle = this.transform.position - paddle.transform.position;
     }
 	
