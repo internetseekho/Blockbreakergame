@@ -15,4 +15,11 @@ public class LevelManager : MonoBehaviour {
         print("Quit request received");
         Application.Quit();
     }
+
+    public void LoadNextLevel() {
+
+        Application.LoadLevel( Application.loadedLevel + 1 );
+
+    }
+
 }
